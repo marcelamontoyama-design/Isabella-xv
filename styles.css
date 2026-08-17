@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#070b18;
+  --bg2:#111126;
+  --gold:#d7ae68;
+  --gold2:#f0d39b;
+  --text:#f7f1e7;
+  --muted:#cfc5b6;
+  --line:rgba(215,174,104,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(111,57,130,.20), transparent 28%),
+    radial-gradient(circle at 85% 70%, rgba(74,37,104,.22), transparent 30%),
+    linear-gradient(180deg,var(--bg),#080b18 45%,#101024);
+  font-family:"Cormorant Garamond", Georgia, serif;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; opacity:.35;
+  background-image:
+    radial-gradient(circle, #f1d59b 0 1px, transparent 1.5px);
+  background-size:97px 91px;
+}
+.opening{
+  position:fixed; inset:0; z-index:50; display:grid; place-items:center;
+  background:radial-gradient(circle,#17162c,#060914 70%);
+  transition:opacity .7s ease, visibility .7s ease;
+}
+.opening.hidden{opacity:0;visibility:hidden}
+.opening-inner{text-align:center;padding:30px}
+.crown{font-size:34px;color:var(--gold)}
+.small-title,.label{letter-spacing:.22em;color:var(--gold);font-family:Montserrat,sans-serif;font-size:12px}
+.opening h1,.hero h1{font-size:clamp(68px,14vw,130px);font-weight:500;font-style:italic;margin:12px 0 0;color:#f3dfb8}
+.surname,.hero h2{letter-spacing:.20em;color:#ead3a6;font-family:Montserrat,sans-serif;font-weight:500}
+.divider{color:var(--gold);margin:18px 0;text-align:center}
+.divider.small{margin:8px 0}
+.gold-button,.outline-button{
+  display:inline-block;text-decoration:none;border:1px solid var(--gold);
+  padding:13px 24px;border-radius:28px;letter-spacing:.1em;
+  font-family:Montserrat,sans-serif;font-size:12px;cursor:pointer;
+}
+.gold-button{background:linear-gradient(90deg,#b9883d,#dfb96e);color:#15111a}
+.outline-button{color:var(--gold2);background:rgba(0,0,0,.15)}
+.topbar{
+  position:sticky;top:0;z-index:20;padding:10px 16px;
+  background:rgba(6,9,20,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;
+}
+.brand{font-family:Montserrat,sans-serif;font-size:10px;color:var(--gold2);white-space:nowrap}
+nav{display:flex;gap:16px;flex:1;justify-content:center}
+nav a{color:var(--muted);text-decoration:none;font:10px Montserrat,sans-serif}
+.music-btn{border:1px solid var(--gold);background:transparent;color:var(--gold2);border-radius:50%;width:38px;height:38px;cursor:pointer}
+.section{max-width:780px;margin:auto;padding:80px 28px;position:relative}
+.hero{text-align:center;min-height:760px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero .lead{max-width:680px;font-size:22px;line-height:1.35}
+.hero h2{font-size:17px}
+.subtitle{font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.18em;color:var(--muted);line-height:1.8}
+.detail-card{display:flex;gap:24px;align-items:center;justify-content:center}
+.icon{width:58px;height:58px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:24px;flex:none}
+.value{font-size:28px;margin-top:8px}
+.countdown-wrap{text-align:center;margin:45px 0}
+.countdown{display:flex;justify-content:center;gap:20px;margin-top:18px;flex-wrap:wrap}
+.countdown div{min-width:105px}
+.countdown span{display:block;font-size:42px;color:var(--gold2)}
+.countdown small{font:10px Montserrat,sans-serif;letter-spacing:.18em;color:var(--muted)}
+.parents{text-align:center;border-top:1px solid var(--line);padding-top:38px;font-size:21px}
+.reception,.program,.dress,.confirmation{text-align:left;border-top:1px solid var(--line)}
+.reception h3,.dress h3{font-size:30px;font-weight:500;margin:12px 0}
+.reception p,.dress p,.confirmation p{font-size:21px;line-height:1.35;color:var(--text)}
+.timeline{font-size:22px;line-height:1.8}
+.timeline span{color:var(--gold);display:inline-block;width:35px}
+.timeline b{font-weight:500;margin-right:8px}
+.dress strong{color:var(--gold2)}
+.note{font-size:14px!important;color:var(--muted)!important}
+code{color:var(--gold2)}
+.closing{text-align:center;min-height:300px}
+.closing p{font-size:22px}
+@media(max-width:850px){
+  .topbar{position:relative;flex-wrap:wrap}
+  nav{order:3;width:100%;overflow:auto;justify-content:flex-start}
+  .brand{flex:1;overflow:hidden;text-overflow:ellipsis}
+  .section{padding:65px 22px}
+  .hero{min-height:700px}
+  .hero .lead{font-size:20px}
+  .value{font-size:24px}
+}
