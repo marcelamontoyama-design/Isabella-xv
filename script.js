@@ -1,8 +1,3 @@
-// ================================
-// 1) PON AQUÍ TU NÚMERO DE WHATSAPP
-//    Formato internacional, sin +, espacios ni guiones.
-//    Ejemplo Colombia: 573001234567
-// ================================
 const WHATSAPP_NUMBER = "573005787933";
 
 const message = encodeURIComponent(
@@ -11,10 +6,6 @@ const message = encodeURIComponent(
 document.getElementById("whatsappBtn").href =
   `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
-// ================================
-// 2) CUENTA REGRESIVA
-// Viernes 2 de octubre de 2026 a las 7:00 p. m.
-// ================================
 const eventDate = new Date("2026-10-02T19:00:00-05:00").getTime();
 
 function updateCountdown() {
@@ -32,16 +23,10 @@ function updateCountdown() {
   document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
   document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
 }
+
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ================================
-// 3) MÚSICA
-// Pon tu archivo MP3 en esta misma carpeta
-// y llámalo exactamente: musica.mp3
-// El navegador no permite autoplay con sonido
-// antes de que el invitado interactúe.
-// ================================
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
 const openBtn = document.getElementById("openBtn");
