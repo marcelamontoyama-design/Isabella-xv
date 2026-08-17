@@ -45,3 +45,111 @@ nav{display:flex;justify-content:center;gap:18px;flex:1}nav a{font:500 8px Monts
  .timeline div{grid-template-columns:80px 1fr;font-size:20px}.dress-grid{gap:9px}.dress-grid div{font-size:18px;padding:14px 8px}.envelopes p{font-size:23px}
  .hero .eyebrow,.hero h1,.hero h2,.hero .gold-line,.parents,.parents .section-label,.parents .mini-line,.parents p,.invitation-text{text-align:center} .floral{font-size:145px}.corner-flower,.dress-floral{font-size:95px}
 }
+
+
+/* ===== AJUSTE FINAL: INICIO + LEGIBILIDAD ===== */
+
+/* La parte inicial queda visualmente igual de clara que la sección final. */
+.hero {
+  background: var(--cream, #f7f0e4) !important;
+  color: var(--ink, #17233b) !important;
+  text-align: center !important;
+}
+
+.hero .hero-inner,
+.hero .opening-inner,
+.hero .content,
+.hero .container {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.hero .crown,
+.hero .eyebrow,
+.hero h1,
+.hero h2,
+.hero .gold-line,
+.hero .parents,
+.hero .parents *,
+.hero .invitation-text {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.hero .eyebrow {
+  font-size: clamp(17px, 2.1vw, 23px) !important;
+  line-height: 1.65 !important;
+  letter-spacing: .08em !important;
+}
+
+.hero h1 {
+  font-size: clamp(52px, 7vw, 78px) !important;
+  line-height: 1.05 !important;
+}
+
+.hero h2 {
+  font-size: clamp(24px, 3vw, 34px) !important;
+  line-height: 1.2 !important;
+}
+
+.hero .parents {
+  font-size: 22px !important;
+  line-height: 1.45 !important;
+}
+
+.hero .parents p {
+  font-size: clamp(20px, 2.4vw, 25px) !important;
+  line-height: 1.45 !important;
+}
+
+.hero .parents b,
+.hero .parents .section-label,
+.hero .parents .label {
+  font-size: clamp(15px, 1.8vw, 19px) !important;
+}
+
+.hero .invitation-text {
+  font-size: clamp(21px, 2.5vw, 27px) !important;
+  line-height: 1.55 !important;
+  max-width: 850px !important;
+}
+
+/* Mejor lectura en celulares */
+@media (max-width: 600px) {
+  .hero .eyebrow {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero h1 {
+    font-size: 52px !important;
+  }
+
+  .hero h2 {
+    font-size: 25px !important;
+  }
+
+  .hero .parents p {
+    font-size: 21px !important;
+  }
+
+  .hero .parents b,
+  .hero .parents .section-label,
+  .hero .parents .label {
+    font-size: 15px !important;
+  }
+
+  .hero .invitation-text {
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+/* Evita que los textos centrados se desplacen horizontalmente */
+.hero {
+  overflow-x: hidden !important;
+}
